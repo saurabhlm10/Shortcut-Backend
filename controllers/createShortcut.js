@@ -1,10 +1,15 @@
 const shortcutModel = require('../model/shortcut') 
 
 exports.createShortcut = async (req, res) => {
-    const {shortcutName, shortcutDescription} = req.body
+    const {shortcutName, englishDescription, hindiDescription} = req.body
 
-  const shortcut = await shortcutModel.create({shortcutName, shortcutDescription})
+    console.log(1)
 
+  const shortcut = await shortcutModel.create({shortcutName, englishDescription, hindiDescription})
+
+  
+  console.log(2)
+  console.log(shortcut)
 
 
   res.send({

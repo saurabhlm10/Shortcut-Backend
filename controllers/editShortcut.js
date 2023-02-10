@@ -8,7 +8,8 @@ exports.editShortcut = async (req, res) => {
     const editedShortcut = await shortcutModel.findByIdAndUpdate({_id: shortcutId}, {
 
         shortcutName: shortcut.editedShortcutName,
-        shortcutDescription: shortcut.editedShortcutDescription
+        englishDescription: shortcut.editedEnglishDescription,
+        hindiDescription: shortcut.editedHindiDescription
     })
   
     res.send({
